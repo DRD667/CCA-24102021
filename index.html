@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistance to Covid</title>
+</head>
+<!-- Design Not Responsive, Best suited to 1366*768 -->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background-image: linear-gradient(to right, red, #2b2973, yellow);
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    
+    body::before {
+        position: fixed;
+        inset: 0;
+        content: '';
+        background-image: url(UNO.png);
+        background-repeat: no-repeat;
+        mix-blend-mode: overlay;
+        z-index: -1;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    header {
+        margin: 1rem 0;
+    }
+    
+    main {
+        width: 90%;
+        margin: 0 auto;
+        height: 80vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    main article {
+        padding: 2rem;
+        max-width: 50vw;
+        color: white;
+        width: 500px;
+        position: relative;
+    }
+    
+    button {
+        box-shadow: 2px 2px 0 0 black;
+        padding: 24px 25px;
+        border-radius: 50px 50px;
+        background-color: yellow;
+        color: black;
+        font-size: 1.2em;
+        font-family: Open Sans;
+        font-weight: bold;
+        border: none;
+        margin: 1rem;
+        cursor: pointer;
+        font-family: Poppins;
+        font-size: 1.3em;
+    }
+    
+    #cards>* {
+        background-color: rgb(148, 243, 243);
+        margin: 20px;
+        padding: 10px;
+        border-radius: 10px 30px 30px 0;
+        text-align: center;
+        display: flex;
+        border: 2px solid black;
+        box-shadow: 10px 10px 0 0 black;
+    }
+    
+    img {
+        width: 2em;
+        padding-right: 8px;
+    }
+    
+    button:hover {
+        background-color: black;
+        color: yellow;
+        transition: 0.3s;
+    }
+    
+    #cards>*:hover {
+        transition: 0.3s;
+        color: red;
+        background: white;
+    }
+    
+    header {
+        color: white;
+        text-align: center;
+    }
+    
+    @media (max-width:900px) {
+        main {
+            flex-direction: column;
+            text-align: center;
+        }
+        #cards>* {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 40vmax;
+            width: 40vmax;
+            border-radius: 30px;
+        }
+        body {
+            overflow-y: scroll;
+        }
+        article::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: black;
+            z-index: -1;
+            border-radius: 5px;
+            animation: wave 2s linear infinite alternate;
+        }
+        @keyframes wave {
+            50% {
+                transform: translateY(0.25rem) rotateZ(1deg);
+            }
+            to {
+                transform: translateY(0.5rem) rotateZ(-1deg);
+            }
+        }
+    }
+</style>
+
+<body bgcolor="#2b2973" style="font-family: Poppins;">
+    <header>
+        <h1>Hope is
+            <font color="yellow">strong.</font> Covid is
+            <font color="#013">Weak.</font>
+        </h1>
+        <p>CELEBRATING UNITED NATIONS DAY</p>
+    </header>
+    <main>
+        <div id="left">
+            <article>
+                <h1 style="font-size: 1.7em; margin-bottom:15px;">Controlling the heat of the Moment</h1>Covid 19 has stricken humanity with sheer damnation. But we have not left hope. With the synergy of international Cooperation, a couple of vaccines have been developed which are now being distributed
+                along the globe and it will take time. Till then, we, Earthlings, should carry forth
+                <font color=" yellow"> hope of survival.</font>
+            </article>
+            <a href="https://www.mygov.in/covid-19">
+                <button>Get Covid Statistics</button>
+            </a>
+        </div>
+        <div id="right">
+            <div id="cards">
+                <div>
+                    <img src="atom-solid.svg" alt="img">
+                    <h1>Rebuild Sustainabiity</h1>
+                </div>
+                <div>
+                    <img src="smile-regular.svg" alt="img">
+                    <h1>Have Faith</h1>
+                </div>
+                <div>
+                    <img src="check-circle-solid.svg" alt="img">
+                    <h1>Stop Fake News</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

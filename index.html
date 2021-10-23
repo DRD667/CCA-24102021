@@ -25,10 +25,11 @@
         content: '';
         background-image: url(UNO.png);
         background-repeat: no-repeat;
-        mix-blend-mode: overlay;
         z-index: -1;
+        mix-blend-mode: overlay;
         background-position: center;
         background-attachment: fixed;
+        background-size: 80vmin;
     }
     
     header {
@@ -77,6 +78,7 @@
         display: flex;
         border: 2px solid black;
         box-shadow: 10px 10px 0 0 black;
+        padding: 1rem;
     }
     
     img {
@@ -121,10 +123,13 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: black;
+            background: rgb(46, 16, 16);
+            background-image: url(wave.jpg);
+            background-size: 250%;
+            background-repeat: no-repeat;
             z-index: -1;
             border-radius: 5px;
-            animation: wave 2s linear infinite alternate;
+            animation: wave 2s linear infinite alternate, wave2 21s;
         }
         @keyframes wave {
             50% {
@@ -132,6 +137,11 @@
             }
             to {
                 transform: translateY(0.5rem) rotateZ(-1deg);
+            }
+        }
+        @keyframes wave2 {
+            to {
+                background-position: 100% 0;
             }
         }
     }
